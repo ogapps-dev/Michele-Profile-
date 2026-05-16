@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OG Super Model Contest | OGApps</title>
+    
+    <link rel="preload" as="image" href="background2.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="christine.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="lexi.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="luna.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="michele.jpg" fetchpriority="high">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-part1.css">
+    <link rel="stylesheet" href="styles-part2.css">
+</head>
+<body>
+    <div class="bg-container" style="background-image: url('background2.jpg');">
+        <div class="gold-accent-1"></div>
+        <div class="gold-accent-2"></div>
+        <div class="gold-dust"></div>
+        <div class="shimmer-overlay"></div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <span class="logo-text">OGApps</span>
+            </a>
+            <button class="mobile-toggle" onclick="toggleNav()" aria-label="Toggle Menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contest.html" class="active">Contest</a></li>
+                <li><a href="giveaway.html">Gift</a></li>
+                <li><a href="#michele-feed">Feed</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="contest-header">
+            <div class="glass-card">
+                <h1 class="page-title">OG Super Model Contest</h1>
+                <p class="page-subtitle">60 Elite Creators Competing</p>
+                <div class="contest-meta">
+                    <span class="meta-badge">🔥 Live</span>
+                    <span class="meta-text">Top 4 Rankings Updated</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="top-four-section" id="leaderboard">
+            <h2 class="section-title gold-accent-text">Leaderboard</h2>
+            <div class="top-grid">
+                <div class="top-card rank-1">
+                    <div class="rank-badge">1</div>
+                    <div class="top-img-container">
+                        <img src="christine.jpg" alt="Christine" width="100" height="100" fetchpriority="high" decoding="async">
+                    </div>
+                    <h3 class="top-name">Christine</h3>
+                    <p class="top-stats">250K Likes</p>
+                    <span class="top-status">Top Creator</span>
+                </div>
+
+                <div class="top-card rank-2">
+                    <div class="rank-badge">2</div>
+                    <div class="top-img-container">
+                        <img src="lexi.jpg" alt="Lexi" width="100" height="100" fetchpriority="high" decoding="async">
+                    </div>
+                    <h3 class="top-name">Lexi</h3>
+                    <p class="top-stats">220K Likes</p>
+                    <span class="top-status">Rising Star</span>
+                </div>
+
+                <div class="top-card rank-3">
+                    <div class="rank-badge">3</div>
+                    <div class="top-img-container">
+                        <img src="luna.jpg" alt="Luna" width="100" height="100" fetchpriority="high" decoding="async">
+                    </div>
+                    <h3 class="top-name">Luna</h3>
+                    <p class="top-stats">210K Likes</p>
+                    <span class="top-status">Fan Favorite</span>
+                </div>
+
+                <div class="top-card rank-4 highlight">
+                    <div class="rank-badge gold-badge">4</div>
+                    <div class="top-img-container">
+                        <img src="michele.jpg" alt="Michele" width="100" height="100" fetchpriority="high" decoding="async">
+                        <div class="host-overlay">HOST</div>
+                    </div>
+                    <h3 class="top-name">Michele</h3>
+                    <p class="top-stats">70K Likes</p>
+                    <span class="top-status gold-text">Contestant #4</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="michele-feed" class="feed-section">
+            <div class="feed-header">
+                <img src="michele.jpg" alt="Michele" class="feed-avatar" width="60" height="60" fetchpriority="high" decoding="async">
+                <div class="feed-header-info">
+                    <h2 class="section-title">michele_exclusive</h2>
+                    <div class="profile-badge">
+                        <span>✓</span>
+                        <span>Verified Creator</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="personal-message-card">
+                <div class="pinned-badge">
+                    <span>📌</span>
+                    <span>Pinned Message</span>
+                </div>
+                <div class="message-header">
+                    <img src="michele.jpg" alt="Michele" class="message-avatar" width="50" height="50" decoding="async">
+                    <div class="message-meta">
+                        <h3>Michele</h3>
+                        <span>Contestant #4</span>
+                    </div>
+                </div>
+                <div class="message-content">
+                    <p>Hey my loves! <span class="highlight">Thank you</span> for all the support!</p>
+                    <p>I'm competing in the OG Super Model Contest hosted on OGApps.</p>
+                    <p>Every <span class="highlight">vote</span> brings me closer to #1!</p>
+                    <p>As a thank you, I'm giving away <span class="highlight">$25</span> to supporters!</p>
+                </div>
+                <div class="message-cta">
+                    <a href="giveaway.html" class="btn btn-gold">Claim Your $25 Gift</a>
+                </div>
+            </div>
+
+            <div id="feed-container"></div>
+        </section>
+
+        <section class="all-contestants-section">
+            <h2 class="section-title">All 60 Contestants</h2>
+            <div class="contestants-grid-60" id="contestantsGrid"></div>
+        </section>
+
+        <section class="rules-section">
+            <div class="glass-card">
+                <h3 class="section-subtitle">Contest Rules</h3>
+                <ul class="rules-list">
+                    <li>Engagement calculated from likes, comments, and shares</li>
+                    <li>Rankings updated in real-time based on community support</li>
+                    <li>Weekly prizes for top 3 positions</li>
+                    <li>Final winner receives exclusive OGApps partnership</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <div class="alert-overlay" id="alertOverlay" onclick="closeAlert()"></div>
+    <div class="alert-modal" id="accessAlert">
+        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🔒</div>
+        <h3 style="margin-bottom: 0.5rem;">Access Restricted</h3>
+        <p style="color: rgba(255,255,255,0.7);">Direct access required to view this contestant's profile.</p>
+        <button class="btn btn-gold" onclick="closeAlert()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(e) {
+            const nav = document.getElementById('navLinks');
+            const toggle = document.querySelector('.mobile-toggle');
+            if (nav && toggle && !nav.contains(e.target) && !toggle.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

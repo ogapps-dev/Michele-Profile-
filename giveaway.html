@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>$25 Giveaway | Michele | OGApps</title>
+    
+    <link rel="preload" as="image" href="background3.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="gift.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="michele.jpg" fetchpriority="high">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-part1.css">
+    <link rel="stylesheet" href="styles-part2.css">
+</head>
+<body>
+    <div class="bg-container" style="background-image: url('background3.jpg');">
+        <div class="gold-accent-1"></div>
+        <div class="gold-accent-2"></div>
+        <div class="gold-dust"></div>
+        <div class="shimmer-overlay"></div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <span class="logo-text">OGApps</span>
+            </a>
+            <button class="mobile-toggle" onclick="toggleNav()" aria-label="Toggle Menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contest.html">Contest</a></li>
+                <li><a href="giveaway.html" class="active">Gift</a></li>
+                <li><a href="contest.html#michele-feed">Feed</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content giveaway-page">
+        <div class="giveaway-container">
+            <div class="giveaway-header">
+                <div class="host-pill">
+                    <img src="michele.jpg" alt="Michele" width="30" height="30" fetchpriority="high" decoding="async">
+                    <span>Hosted by Michele</span>
+                </div>
+            </div>
+
+            <div class="glass-card giveaway-card" id="mainCard">
+                <div class="gift-visual">
+                    <img src="gift.jpg" alt="$25 Gift" width="200" height="200" fetchpriority="high" decoding="async">
+                    <div class="gift-glow"></div>
+                </div>
+
+                <h1 class="giveaway-title">$25 Cash Giveaway</h1>
+                <p class="giveaway-subtitle">A token of appreciation for my amazing supporters</p>
+
+                <div class="countdown-pill">
+                    <span class="pulse-dot"></span>
+                    <span id="countdown">Ends in 7d 12h 45m</span>
+                </div>
+
+                <div class="code-reveal-box">
+                    <span class="code-label">Gift Code</span>
+                    <code class="masked-code" id="giftCode">••••-••••-••••</code>
+                </div>
+
+                <div class="progress-wrapper">
+                    <div class="progress-info">
+                        <span>Claimed</span>
+                        <span id="progressText">847/1000</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" id="progressFill" style="width: 84.7%"></div>
+                    </div>
+                    <div class="progress-stats">
+                        <div class="p-stat"><strong>153</strong> remaining</div>
+                        <div class="p-stat"><strong>$25</strong> value</div>
+                    </div>
+                </div>
+
+                <button class="btn btn-gold btn-pulse" id="claimBtn" onclick="processClaim()">
+                    Claim My $25 Gift
+                </button>
+
+                <div class="michele-note">
+                    <p>"Hey loves! This is my way of saying thank you for helping me in the contest!"</p>
+                    <span class="note-signature">— Michele 💛</span>
+                </div>
+            </div>
+
+            <div class="glass-card giveaway-card success-card" id="successCard" style="display: none;">
+                <div class="success-icon">🎉</div>
+                <h2 class="success-title">Congratulations!</h2>
+                <p class="success-text">You are eligible for the $25 giveaway!</p>
+                <p class="success-subtitle">Thank you for supporting — Michele 💛</p>
+
+                <div class="verified-badge">
+                    <span>✓</span>
+                    <span>Verified & Approved</span>
+                </div>
+
+                <div class="michele-note cyan-theme">
+                    <p>"Thank you for supporting my journey in the contest! Here's your gift!"</p>
+                    <span class="note-signature">— Michele 💛</span>
+                </div>
+
+                <button class="btn btn-cyan btn-glow" onclick="unlockGift()">
+                    Unlock Your Gift
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        function updateCountdown() {
+            const days = 7;
+            const hours = Math.floor(Math.random() * 24);
+            const mins = Math.floor(Math.random() * 60);
+            document.getElementById('countdown').textContent = `Ends in ${days}d ${hours}h ${mins}m`;
+        }
+
+        setInterval(updateCountdown, 60000);
+        updateCountdown();
+
+        function processClaim() {
+            const btn = document.getElementById('claimBtn');
+            btn.textContent = 'Processing...';
+            btn.disabled = true;
+            
+            playClaimSound();
+            document.getElementById('mainCard').classList.add('processing-glow');
+            
+            setTimeout(() => {
+                document.getElementById('mainCard').style.display = 'none';
+                document.getElementById('successCard').style.display = 'block';
+                document.getElementById('successCard').classList.add('fade-in-up');
+                document.getElementById('progressText').textContent = '848/1000';
+                document.getElementById('progressFill').style.width = '84.8%';
+            }, 1500);
+        }
+
+        function unlockGift() {
+            window.location.href = 'https://lockerpreview.com/cl/v/xp2lmg?preview=1';
+        }
+
+        function playClaimSound() {
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(1046.5, audioContext.currentTime + 0.1);
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.3);
+            } catch(e) {
+                console.log('Audio not supported');
+            }
+        }
+
+        document.addEventListener('click', function(e) {
+            const nav = document.getElementById('navLinks');
+            const toggle = document.querySelector('.mobile-toggle');
+            if (nav && toggle && !nav.contains(e.target) && !toggle.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

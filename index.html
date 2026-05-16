@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OGApps | The Original App Ecosystem</title>
+    
+    <link rel="preload" as="image" href="background1.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="ogapps.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="michele.jpg" fetchpriority="high">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-part1.css">
+    <link rel="stylesheet" href="styles-part2.css">
+</head>
+<body>
+    <div class="bg-container" style="background-image: url('background1.jpg');">
+        <div class="gold-accent-1"></div>
+        <div class="gold-accent-2"></div>
+        <div class="gold-dust"></div>
+        <div class="shimmer-overlay"></div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <span class="logo-text">OGApps</span>
+            </a>
+            <button class="mobile-toggle" onclick="toggleNav()" aria-label="Toggle Menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="contest.html">Contest</a></li>
+                <li><a href="giveaway.html">Gift</a></li>
+                <li><a href="contest.html#michele-feed">Feed</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="glass-card hero-card">
+                <div class="hero-visual-large">
+                    <img src="ogapps.jpg" alt="OGApps Platform" class="hero-logo-full" width="300" height="300" fetchpriority="high" decoding="async">
+                </div>
+                <h1 class="hero-title">The Original App Ecosystem</h1>
+                <p class="hero-subtitle">Premium APK Platform • VPN Tools • Classic Games • Creator Network</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">200K+</span>
+                        <span class="stat-label">Active Users</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6M+</span>
+                        <span class="stat-label">Downloads</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">60</span>
+                        <span class="stat-label">Active Contestants</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="contest.html" class="btn btn-cyan">View Contest</a>
+                    <a href="giveaway.html" class="btn btn-gold">Claim $25 Gift</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <h2 class="section-title">Featured Creator</h2>
+            <div class="creator-showcase">
+                <div class="creator-visual">
+                    <img src="michele.jpg" alt="Michele" class="creator-img" width="200" height="200" fetchpriority="high" decoding="async">
+                    <div class="creator-badge">Host</div>
+                </div>
+                <div class="creator-info">
+                    <h3 class="creator-name">Michele</h3>
+                    <p class="creator-role">Contestant #4 • Verified Creator</p>
+                    <p class="creator-bio">
+                        Host of the OG Super Model Contest. Premium content creator and community favorite. 
+                        Currently competing for the top spot with 70K+ engagement.
+                    </p>
+                    <div class="creator-stats-row">
+                        <span class="creator-stat"><strong>70K+</strong> Likes</span>
+                        <span class="creator-stat"><strong>Rank #4</strong></span>
+                        <span class="creator-stat"><strong>Elite</strong> Status</span>
+                    </div>
+                    <a href="giveaway.html" class="btn btn-gold btn-outline">Support & Claim Gift</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="glass-card">
+                <h2 class="section-title">About OGApps</h2>
+                <p class="about-text">
+                    OGApps represents the pinnacle of mobile entertainment—a premium app ecosystem connecting 
+                    elite creators with dedicated fans. Our platform delivers exclusive APK access, 
+                    enterprise-grade VPN tools, nostalgic classic games, and a thriving creator economy.
+                </p>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <h4>Premium APKs</h4>
+                        <p>Exclusive apps and modded content library</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔒</div>
+                        <h4>VPN Tools</h4>
+                        <p>Secure browsing and global access solutions</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎮</div>
+                        <h4>Classic Games</h4>
+                        <p>Nostalgic gaming collection and emulators</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+        
+        document.addEventListener('click', function(e) {
+            const nav = document.getElementById('navLinks');
+            const toggle = document.querySelector('.mobile-toggle');
+            if (nav && toggle && !nav.contains(e.target) && !toggle.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
